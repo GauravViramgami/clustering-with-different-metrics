@@ -21,6 +21,39 @@ st.write(
     "Visualizing the impact of different distance metrics on clustering results, showing how Euclidean, Manhattan, and other metrics lead to different cluster formations. Have a dropdown for distance metrics."
 )
 
+st.write("Let x and y be two n dimensional vectors.")
+st.write("1. Euclidean Distance Formula:")
+st.latex(r'''
+d = \sqrt{\sum_{i = 1}^{i = n} (x_i - y_i)^2}
+''')
+
+st.write("2. Squared Euclidean Distance Formula:")
+st.latex(r'''
+d = \sum_{i = 1}^{i = n} (x_i - y_i)^2
+''')
+
+st.write("3. Manhattan Distance Formula:")
+st.latex(r'''
+d = \sum_{i = 1}^{i = n} \mid x_i - y_i \mid
+''')
+
+st.write("4. Chebyshev Distance Formula:")
+st.latex(r'''
+d = max_{i = 1}^{i = n} \mid x_i - y_i \mid
+''')
+
+st.write("5. Canberra Distance Formula:")
+
+st.latex(r'''
+d = \sum_{i = 1}^{i = n} \frac{\mid x_i - y_i \mid}{\mid x_i \mid + \mid y_i \mid}
+''')
+
+st.write("6. Chi-Squared Distance Formula:")
+
+st.latex(r'''
+d = \frac{1}{2} \sum_{i = 1}^{i = n} \frac{(x_i - y_i)^2}{(x_i + y_i)}
+''')
+
 # The sidebar contains the sliders
 with st.sidebar:
     # Drop down to select Clustering Algorithm
